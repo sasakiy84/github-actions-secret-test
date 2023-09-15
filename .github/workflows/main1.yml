@@ -1,0 +1,14 @@
+name: test 1
+on:
+  workflow_dispatch:
+
+env:
+  TEST_SECRET: ${{ secrets.TEST_SECRET }}
+
+jobs:
+  test1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo $PWD
+      - run: echo $TEST_SECRET
