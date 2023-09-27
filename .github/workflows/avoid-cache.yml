@@ -1,0 +1,13 @@
+name: test 3 - avoid cache
+on:
+  workflow_dispatch:
+
+env:
+  TEST_SECRET: ${{ secrets.TEST_SECRET }}
+
+jobs:
+  test3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm i
